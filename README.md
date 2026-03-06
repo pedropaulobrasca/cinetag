@@ -260,6 +260,16 @@ sequenceDiagram
 
 ---
 
+## Demo online
+
+| Serviço | URL |
+|---------|-----|
+| **Frontend** | [https://d22vdb9j9yq88s.cloudfront.net](https://d22vdb9j9yq88s.cloudfront.net) |
+| **Backend API** | [https://jn89vcnsny.us-east-1.awsapprunner.com](https://jn89vcnsny.us-east-1.awsapprunner.com) |
+| **Health Check** | [https://jn89vcnsny.us-east-1.awsapprunner.com/health](https://jn89vcnsny.us-east-1.awsapprunner.com/health) |
+
+---
+
 ## Deploy na AWS (Terraform)
 
 A infraestrutura é provisionada como código com **Terraform**, seguindo a arquitetura abaixo:
