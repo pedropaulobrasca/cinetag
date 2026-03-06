@@ -27,7 +27,7 @@ export async function createApp(config: AppConfig): Promise<express.Application>
   app.use(express.json());
 
   app.get('/health', (_req, res) => {
-    const mongoStatus = mongoReadyStates[mongoose.connection.readyState] ?? 'unknown';
+    const mongoStatus = mongoReadyStates[mongoose.connection.readyState as number] ?? 'unknown';
     res.json({
       status: 'ok',
       mongodb: mongoStatus,

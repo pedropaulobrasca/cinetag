@@ -1,11 +1,11 @@
-import { Schema, model, Document } from 'mongoose';
+import { Schema, model } from 'mongoose';
 
 interface IActorSubdocument {
   name: string;
   character: string;
 }
 
-export interface IFavoriteDocument extends Document {
+export interface IFavoriteDocument {
   _id: string;
   userId: string;
   tmdbId: number;
