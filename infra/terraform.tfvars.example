@@ -1,0 +1,5 @@
+aws_region     = "us-east-1"
+project_name   = "cinetag"
+mongodb_uri    = "mongodb+srv://user:pass@cluster.mongodb.net/cinetag"
+jwt_secret     = "sua_chave_secreta_aqui_min_16_chars"
+jwt_expires_in = "7d"
