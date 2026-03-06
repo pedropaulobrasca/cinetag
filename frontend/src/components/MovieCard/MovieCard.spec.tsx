@@ -15,7 +15,7 @@ const mockMovie: TmdbMovie = {
 describe('MovieCard', () => {
   it('should render the movie title and release year', () => {
     render(
-      <MovieCard movie={mockMovie} isAlreadyFavorited={false} onAddToFavorites={jest.fn()} />,
+      <MovieCard movie={mockMovie} isAlreadyFavorited={false} onAddToFavorites={jest.fn()} onCardClick={jest.fn()} />,
     );
 
     expect(screen.getByText('Fight Club')).toBeInTheDocument();
@@ -24,7 +24,7 @@ describe('MovieCard', () => {
 
   it('should render the movie rating', () => {
     render(
-      <MovieCard movie={mockMovie} isAlreadyFavorited={false} onAddToFavorites={jest.fn()} />,
+      <MovieCard movie={mockMovie} isAlreadyFavorited={false} onAddToFavorites={jest.fn()} onCardClick={jest.fn()} />,
     );
 
     expect(screen.getByText(/8\.4/)).toBeInTheDocument();
@@ -34,7 +34,7 @@ describe('MovieCard', () => {
     const onAddToFavorites = jest.fn();
 
     render(
-      <MovieCard movie={mockMovie} isAlreadyFavorited={false} onAddToFavorites={onAddToFavorites} />,
+      <MovieCard movie={mockMovie} isAlreadyFavorited={false} onAddToFavorites={onAddToFavorites} onCardClick={jest.fn()} />,
     );
 
     fireEvent.click(screen.getByRole('button', { name: /favoritar fight club/i }));
@@ -44,7 +44,7 @@ describe('MovieCard', () => {
 
   it('should disable the favorite button and show "Favoritado" when already favorited', () => {
     render(
-      <MovieCard movie={mockMovie} isAlreadyFavorited={true} onAddToFavorites={jest.fn()} />,
+      <MovieCard movie={mockMovie} isAlreadyFavorited={true} onAddToFavorites={jest.fn()} onCardClick={jest.fn()} />,
     );
 
     const button = screen.getByRole('button', { name: /já favoritado/i });

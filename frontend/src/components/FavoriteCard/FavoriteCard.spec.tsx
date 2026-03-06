@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { FavoriteCard } from './index';
 import { Favorite } from '../../features/favorites/types/favorite.types';
 import { useFavoritesStore } from '../../features/favorites/store/useFavoritesStore';
@@ -15,6 +15,10 @@ const mockFavorite: Favorite = {
   title: 'Fight Club',
   rating: 8.4,
   posterPath: '/poster.jpg',
+  overview: 'An insomniac office worker...',
+  releaseDate: '1999-10-15',
+  genres: ['Drama'],
+  runtime: 139,
   actors: [{ name: 'Brad Pitt', character: 'Tyler Durden' }],
   tags: ['ação clássica', 'cult'],
   addedAt: '2024-01-01T00:00:00.000Z',
